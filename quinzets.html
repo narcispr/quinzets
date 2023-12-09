@@ -1,0 +1,76 @@
+<!--Create basic HTML page with the following layout: One header with a title and some controls and 3 columns that will be dynamically generated using a javascript function-->
+<html>
+
+<head>
+    <title>Quinzets</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="js/quinzets.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Quinzets</h1>
+        <div id="controls">
+            <div id="config_tab">
+                <h2>Configuració</h2>
+                <table id="config">
+                    <tr>
+                        <td>Temps total:</td>
+                        <td><input type="number" id="totalTime" value="120"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Sumes:</td>
+                        <td><input type="checkbox" id="sums" checked></input></td>
+                    </tr>
+                    <tr>
+                        <td>Restes:</td>
+                        <td><input type="checkbox" id="subs" checked></input></td>
+                    </tr>
+                    <tr>
+                        <td>Multiplicacions:</td>
+                        <td><input type="checkbox" id="mults" checked></input></td>
+                    </tr>
+                    <tr>
+                        <td>Divisions:</td>
+                        <td><input type="checkbox" id="divs" checked></input></td>
+                    </tr>
+                    <tr>
+                        <td>Extra Difícil:</td>
+                        <td><input type="checkbox" id="twoDigits"></input></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="butttons">
+                <button id="btnNew" onclick="generate()">Nou</button>
+                <button id="btnCheck" onclick="check()">Soluciona</button>
+            </div>
+        </div>
+        <div id="scoreboard">
+            Temps: <label id="timer">-</label>
+            Puntuació: <label id="score">-</label>
+        </div>
+    </div>
+    <div id="content">
+        <table id="exercises">
+            <tr>
+                <td id="td1">
+                    <div id="col1"></div>
+                </td>
+                <td id="td2">
+                    <div id="col2"></div>
+                </td>
+                <td id="td3">
+                    <div id="col3"></div>
+                </td>
+                <td id="td4">
+                    <div id="col4"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer>
+    <p id="caption"><abbr title="General Public License">GPL</abbr> 2023 - Narcís Palomeras</p>
+</footer>
+
+</html>
